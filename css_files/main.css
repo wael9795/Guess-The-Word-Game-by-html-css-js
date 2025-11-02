@@ -1,0 +1,150 @@
+:root {
+  --green-main: #4caf50;
+  --orange-main: #ffc107;
+  --gray-main: #848484;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: rgba(7, 7, 7, 0.934);
+}
+.parent {
+  width: 50%;
+  margin: 100px auto 0px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.title {
+  padding: 15px 0px;
+  text-align: center;
+  background-color: white;
+}
+.parts {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: rgb(218, 218, 218);
+  padding: 20px;
+}
+/* left column start */
+.left * {
+  user-select: none;
+}
+.left .check-buttons button {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+  transition-duration: 0.3s;
+}
+.left .check-buttons .check-word {
+  width: 70%;
+  background-color: rgb(255, 55, 0);
+}
+.left .check-buttons .check-word:hover {
+  background-color: rgb(210, 47, 2);
+}
+.left .check-buttons .hint-button {
+  width: 28%;
+  background-color: rgb(49, 214, 8);
+}
+.left .check-buttons .hint-button:hover {
+  background-color: rgb(42, 183, 7);
+}
+/* left column end */
+.left .divs-container > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 7px;
+}
+.left .divs-container > div h3 {
+  margin-right: 10px;
+}
+.left .divs-container > div input {
+  width: 50px;
+  height: 50px;
+  display: block;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.in-place {
+  background-color: var(--green-main);
+  color: white;
+}
+
+.out-place {
+  background-color: var(--orange-main);
+  color: black;
+}
+
+.not-place {
+  background-color: var(--gray-main);
+  color: white;
+}
+
+/* right column start */
+.right h3 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.right .text div {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: white;
+}
+.right span {
+  margin-right: 15px;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.right .one {
+  background-color: var(--green-main);
+}
+.right .two {
+  background-color: var(--orange-main);
+}
+.right .three {
+  background-color: var(--gray-main);
+}
+.right .text div p {
+  font-size: 14px;
+  font-weight: bold;
+}
+/* right column end */
+
+/* classes start */
+
+.half-opacity {
+  opacity: 0.8;
+}
+.half-opacity-head {
+  opacity: 0.3;
+}
+.empty {
+  background-color: red;
+}
+
+/* classes end */
+.hint-close {
+  opacity: 0.5;
+  cursor: no-drop;
+}
