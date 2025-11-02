@@ -6,7 +6,7 @@ console.log(randomWord.toUpperCase());
 
 const trysNumber = 5;
 const lettersNumber = 6;
-let hintNumber = 3;
+let hintNumber = 4;
 let currentTryNumber = 1;
 
 let checkButton = document.querySelector(".check-word");
@@ -134,13 +134,13 @@ function checkWord() {
     setColorsToInputs();
     if (userWord.toUpperCase() === randomWord.toUpperCase()) {
       setTimeout(() => {
-        window.alert("You win");
+        window.alert(`You win the word is ${randomWord.toUpperCase()}`);
         location.reload();
       }, 300);
     } else {
       if (currentTryNumber === trysNumber) {
         setTimeout(() => {
-          window.alert("You Lose");
+          window.alert(`Sorry You lose the word is ${randomWord.toUpperCase()}`);
           location.reload();
         }, 300);
       } else {
