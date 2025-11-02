@@ -151,32 +151,32 @@ function checkWord() {
     }
   }
 }
-hintButton.addEventListener("click", () => {
-  giveHint();
-});
+// hintButton.addEventListener("click", () => {
+//   giveHint();
+// });
 
-let hintArray = [];
-function giveHint() {
-  let randomNumber = Math.floor(Math.random() * lettersNumber);
-  if (hintArray.includes(randomNumber)) {
-    giveHint();
-  } else {
-    hintArray.push(randomNumber);
-    let currentInputs = getCurrentInputsArray();
-    let randomLetter = randomWord[randomNumber];
-    console.log(`random number = ${randomNumber} ,,,, random letter = ${randomLetter}`);
-    currentInputs.forEach((input, index) => {
-      if (input.value.length === 0 && index === randomNumber) {
-        input.value = randomLetter;
-        input.classList.add("in-place");
-        input.disabled = true;
-      }
-    });
-    hintNumber--;
-    hintButton.querySelector("span").innerHTML = `${hintNumber} `;
-    if (hintNumber === 0) {
-      hintButton.disabled = true;
-      hintButton.classList.add("hint-close");
-    }
-  }
-}
+// let hintArray = [];
+// function giveHint() {
+//   let randomNumber = Math.floor(Math.random() * lettersNumber);
+//   if (hintArray.includes(randomNumber)) {
+//     giveHint();
+//   } else {
+//     hintArray.push(randomNumber);
+//     let currentInputs = getCurrentInputsArray();
+//     let randomLetter = randomWord[randomNumber];
+//     console.log(`random number = ${randomNumber} ,,,, random letter = ${randomLetter}`);
+//     currentInputs.forEach((input, index) => {
+//       if (input.value.length === 0 && index === randomNumber) {
+//         input.value = randomLetter;
+//         input.classList.add("in-place");
+//         input.disabled = true;
+//       }
+//     });
+//     hintNumber--;
+//     hintButton.querySelector("span").innerHTML = `${hintNumber} `;
+//     if (hintNumber === 0) {
+//       hintButton.disabled = true;
+//       hintButton.classList.add("hint-close");
+//     }
+//   }
+// }
